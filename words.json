@@ -186,12 +186,12 @@
       "id": "70233701-c4db-462c-9e6a-20a97b0a8653",
       "duplicateCount": 0,
       "reviewMissCount": 0,
-      "level": 0,
-      "nextReview": "2026-11-16",
-      "lastReviewed": "",
+      "level": 1,
+      "nextReview": "2026-11-18",
+      "lastReviewed": "2026-11-17",
       "lastMistakeAt": "2026-11-16",
       "createdAt": "2026-11-16T14:29:27.061Z",
-      "updatedAt": "2026-11-16T14:29:27.061Z"
+      "updatedAt": "2026-11-16T22:30:23.820Z"
     }
   ]
 }
