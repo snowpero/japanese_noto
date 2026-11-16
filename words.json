@@ -13,6 +13,19 @@
       "lastReviewed": "2026-11-16",
       "createdAt": "2026-11-16T09:48:28.333Z",
       "updatedAt": "2026-11-16T10:01:12.211Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "認める",
+      "reading": "みとめる",
+      "meaning": "인정하다",
+      "memo": "異常(いじょう)を認(みと)める \n\n이상을 인지하다",
+      "id": "802d3503-bf21-45fb-bea5-9c3d4c658133",
+      "level": 0,
+      "nextReview": "2026-11-16",
+      "lastReviewed": "",
+      "createdAt": "2026-11-16T11:04:54.037Z",
+      "updatedAt": "2026-11-16T11:04:54.037Z"
     }
   ]
 }
