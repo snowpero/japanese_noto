@@ -13,7 +13,7 @@
 <section id="review" class="page"><div class="panel"><div class="stats"><div class="stat"><strong id="dueCount">0</strong><span>오늘 복습</span></div><div class="stat"><strong id="totalCount">0</strong><span>전체 항목</span></div><div class="stat"><strong id="doneCount">0</strong><span>오늘 완료</span></div></div><div id="reviewArea"></div></div></section>
 <section id="add" class="page hidden"><div class="panel"><h2 id="formHeading">새 항목 등록</h2><form id="entryForm"><label for="kind">유형</label><select id="kind"><option value="word">단어</option><option value="sentence">문장</option><option value="grammar">문법</option></select><label for="japanese">일본어 *</label><textarea id="japanese" required placeholder="예: 落ちる"></textarea><label for="reading">읽는 방법 (선택)</label><input id="reading" placeholder="예: おちる"><label for="meaning">한국어 뜻 *</label><textarea id="meaning" required placeholder="예: 떨어지다"></textarea><label for="memo">예문 / 메모 (선택)</label><textarea id="memo" placeholder="예: 試験に落ちる"></textarea><div class="row topgap"><button class="primary" type="submit">항목 저장</button><button type="button" id="cancelEdit" class="hidden">수정 취소</button></div></form></div></section>
 <section id="list" class="page hidden"><div class="panel"><h2>전체 오답노트</h2><input id="search" placeholder="일본어 · 읽기 · 뜻 · 메모 검색" aria-label="검색"><div id="listArea"></div></div></section>
-<section id="settings" class="page hidden"><div class="panel"><h2>GitHub 연결</h2><div class="notice">GitHub 저장소의 <b>Contents: Read and write</b> 권한이 있는 Fine-grained Personal Access Token을 사용해. 토큰을 HTML이나 JSON에 넣지 마. 공용 기기에서는 저장하지 않는 것이 좋아.</div><label for="owner">GitHub 사용자명 (Owner)</label><input id="owner" autocomplete="off" placeholder="github-username"><label for="repo">저장소 이름</label><input id="repo" autocomplete="off" placeholder="japanese-note"><label for="branch">브랜치</label><input id="branch" value="main" autocomplete="off"><label for="path">JSON 파일 경로</label><input id="path" value="words.json" autocomplete="off"><label for="token">GitHub 토큰</label><input id="token" type="password" autocomplete="off" placeholder="github_pat_..."><label class="row" style="font-weight:400"><input id="rememberToken" type="checkbox" checked style="width:auto"> 이 기기 브라우저에 토큰 보관 (보안 위험 있음)</label><div class="row topgap"><button id="connect" class="primary">연결하고 불러오기</button><button id="pull">GitHub에서 다시 불러오기</button></div><div class="row topgap"><button id="push" class="primary">GitHub에 저장</button><button id="forgetToken">저장된 토큰 삭제</button><button id="disconnect">연결 정보 지우기</button></div><p class="subtle">단어 등록 및 복습 후 GitHub에 자동 저장을 시도해. 연결이 없거나 실패하면 이 기기의 브라우저에 보관하고, 연결 후 다시 저장할 수 있어. 다른 기기에서는 같은 저장소와 토큰을 설정하면 돼.</p><div id="message" class="notice hidden" role="status"></div></div><div class="panel"><h2>백업</h2><div class="row"><button id="export">JSON 다운로드</button><button id="importBtn">JSON 가져오기</button><input id="importFile" type="file" accept="application/json,.json" class="hidden"></div><p class="muted">가져오기는 현재 노트를 덮어써. GitHub에는 별도로 저장해야 해.</p></div></section>
+<section id="settings" class="page hidden"><div class="panel"><h2>GitHub 연결</h2><div class="notice">GitHub Pages 주소에서 저장소를 자동 인식해. 브랜치는 <b>main</b>, 데이터 파일은 <b>words.json</b>으로 고정했어. Fine-grained Token에는 해당 저장소의 <b>Contents: Read and write</b> 권한이 필요해.</div><div class="notice" id="repoInfo"></div><label for="token">GitHub 토큰</label><input id="token" type="password" autocomplete="off" placeholder="github_pat_..."><label class="row" style="font-weight:400"><input id="rememberToken" type="checkbox" checked style="width:auto"> 이 기기 브라우저에 토큰 보관 (보안 위험 있음)</label><div class="row topgap"><button id="connect" class="primary">연결하고 불러오기</button><button id="pull">GitHub에서 다시 불러오기</button></div><div class="row topgap"><button id="push" class="primary">GitHub에 저장</button><button id="forgetToken">저장된 토큰 삭제</button><button id="disconnect">연결 정보 지우기</button></div><p class="subtle">단어 등록 및 복습 후 GitHub에 자동 저장을 시도해. 연결이 없거나 실패하면 이 기기의 브라우저에 보관해. GitHub 토큰은 HTML이나 JSON에 넣지 마.</p><div id="message" class="notice hidden" role="status"></div></div><div class="panel"><h2>백업</h2><div class="row"><button id="export">JSON 다운로드</button><button id="importBtn">JSON 가져오기</button><input id="importFile" type="file" accept="application/json,.json" class="hidden"></div><p class="muted">가져오기는 현재 노트를 덮어써. GitHub에는 별도로 저장해야 해.</p></div></section>
 <div id="globalStatus" class="muted status" role="status" aria-live="polite"></div>
 </main>
 <script>
@@ -25,8 +25,19 @@ const after=n=>{const d=new Date();d.setDate(d.getDate()+n);return `${d.getFullY
 const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const valid=d=>d&&Array.isArray(d.items)&&d.items.every(x=>x&&typeof x.id==='string'&&typeof x.japanese==='string'&&typeof x.meaning==='string');
 function persist(){localStorage.setItem(KEY,JSON.stringify(data));rev++;render();scheduleSave()}
-function config(){return {owner:$('owner').value.trim(),repo:$('repo').value.trim(),branch:$('branch').value.trim()||'main',path:$('path').value.trim()||'words.json',token:$('token').value.trim()||sessionStorage.getItem(TOKEN)||localStorage.getItem(TOKEN)||''}}
-function remember(){const c=config();localStorage.setItem(CFG,JSON.stringify({owner:c.owner,repo:c.repo,branch:c.branch,path:c.path}));if($('rememberToken').checked){localStorage.setItem(TOKEN,c.token);sessionStorage.removeItem(TOKEN)}else{sessionStorage.setItem(TOKEN,c.token);localStorage.removeItem(TOKEN)}}
+// GitHub Pages 기본 주소: https://OWNER.github.io/REPO/
+// 사용자/조직 페이지(OWNER.github.io 저장소)도 지원.
+function siteRepository(){
+  const host=location.hostname.toLowerCase();
+  const match=host.match(/^([a-z0-9-]+)\.github\.io$/);
+  if(!match)return null;
+  const owner=match[1];
+  const first=decodeURIComponent(location.pathname.split('/').filter(Boolean)[0]||'');
+  if(first && !/^[a-z0-9._-]+$/i.test(first))return null;
+  return {owner,repo:first||owner+'.github.io',branch:'main',path:'words.json'};
+}
+function config(){return {...(siteRepository()||{owner:'',repo:'',branch:'main',path:'words.json'}),token:$('token').value.trim()||sessionStorage.getItem(TOKEN)||localStorage.getItem(TOKEN)||''}}
+function remember(){const c=config();if($('rememberToken').checked){localStorage.setItem(TOKEN,c.token);sessionStorage.removeItem(TOKEN)}else{sessionStorage.setItem(TOKEN,c.token);localStorage.removeItem(TOKEN)}}
 function status(s){$('globalStatus').textContent=s;$('message').textContent=s;$('message').classList.remove('hidden')}
 function connected(){const c=config();return !!(c.owner&&c.repo&&c.token)}
 function badge(){ $('syncBadge').textContent=connected()?'GitHub 연결':'로컬 모드'}
@@ -49,7 +60,7 @@ function encode64(s){const bytes=new TextEncoder().encode(s);let str='';for(let 
 async function remote(c){const f=await request(c,'GET');const d=JSON.parse(decode64(f.content));if(!valid(d))throw Error('JSON 데이터 형식이 올바르지 않아');return {data:d,sha:f.sha}}
 let lastSynced=null;
 function snapshot(d){return JSON.stringify(d)}
-async function pull(){if(!connected())return status('GitHub 사용자명, 저장소, 토큰을 먼저 입력해.');if(busy)return;busy=true;try{const r=await remote(config());if(data.items.length&&lastSynced!==snapshot(data)&&!confirm('현재 브라우저의 변경 내용을 GitHub 데이터로 덮어쓸까?'))return;data=r.data;lastSynced=snapshot(data);localStorage.setItem(KEY,lastSynced);render();status('GitHub에서 최신 데이터를 불러왔어.')}catch(e){status('불러오기 실패: '+e.message)}finally{busy=false}}
+async function pull(){if(!connected())return status('GitHub Pages 주소를 확인하고 토큰을 입력해.');if(busy)return;busy=true;try{const r=await remote(config());if(data.items.length&&lastSynced!==snapshot(data)&&!confirm('현재 브라우저의 변경 내용을 GitHub 데이터로 덮어쓸까?'))return;data=r.data;lastSynced=snapshot(data);localStorage.setItem(KEY,lastSynced);render();status('GitHub에서 최신 데이터를 불러왔어.')}catch(e){status('불러오기 실패: '+e.message)}finally{busy=false}}
 function mergeFirstSave(local,server){
   const byId=new Map(server.items.map(x=>[x.id,x]));
   for(const item of local.items){
@@ -85,13 +96,13 @@ async function push(){
   finally{busy=false;if(rev!==startRev)scheduleSave()}
 }
 function scheduleSave(){clearTimeout(saveTimer);if(connected())saveTimer=setTimeout(()=>{if(!busy)push();else scheduleSave()},1200)}
-$('connect').onclick=async()=>{remember();badge();await pull()};$('pull').onclick=pull;$('push').onclick=push;
+$('connect').onclick=async()=>{if(!siteRepository())return status('저장소를 자동 인식하지 못했어. GitHub Pages 주소로 접속해.');remember();badge();await pull()};$('pull').onclick=pull;$('push').onclick=push;
 $('forgetToken').onclick=()=>{localStorage.removeItem(TOKEN);sessionStorage.removeItem(TOKEN);$('token').value='';$('rememberToken').checked=false;badge();status('저장된 토큰을 삭제했어. 저장소 설정과 오답 데이터는 유지돼.')};
-$('disconnect').onclick=()=>{localStorage.removeItem(CFG);localStorage.removeItem(TOKEN);sessionStorage.removeItem(TOKEN);['owner','repo','token'].forEach(k=>$(k).value='');lastSynced=null;badge();status('연결 정보를 지웠어. 브라우저의 노트 데이터는 유지돼.')};
+$('disconnect').onclick=()=>{localStorage.removeItem(CFG);localStorage.removeItem(TOKEN);sessionStorage.removeItem(TOKEN);$('token').value='';lastSynced=null;badge();status('연결 토큰을 지웠어. 브라우저의 노트 데이터는 유지돼.')};
 $('export').onclick=()=>{const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`japanese-note-${today()}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 $('importBtn').onclick=()=>$('importFile').click();$('importFile').onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const d=JSON.parse(await f.text());if(!valid(d))throw Error('잘못된 파일 형식');if(!confirm('현재 브라우저 노트를 가져온 파일로 덮어쓸까?'))return;data=d;current=null;persist();status('JSON을 가져왔어. GitHub 저장은 별도로 확인해.')}catch(err){status('가져오기 실패: '+err.message)}finally{e.target.value=''}};
 try{const saved=JSON.parse(localStorage.getItem(KEY));if(valid(saved))data=saved}catch{}
-try{const c=JSON.parse(localStorage.getItem(CFG)||'{}');['owner','repo','branch','path'].forEach(k=>{if(c[k])$(k).value=c[k]})}catch{}
+const detected=siteRepository();$('repoInfo').textContent=detected?`저장소: ${detected.owner}/${detected.repo} · 브랜치: main · 파일: words.json`:'GitHub Pages 기본 주소에서 저장소를 자동 인식하지 못했어. https://사용자명.github.io/저장소명/ 주소로 접속해.';
 const savedToken=localStorage.getItem(TOKEN);if(savedToken){$('token').value=savedToken;$('rememberToken').checked=true}else $('token').value=sessionStorage.getItem(TOKEN)||'';
 render();
 })();
