@@ -130,6 +130,19 @@
       "lastReviewed": "",
       "createdAt": "2026-11-16T11:42:45.957Z",
       "updatedAt": "2026-11-16T11:42:45.957Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "合わせる",
+      "reading": "あわせる",
+      "meaning": "맞추다",
+      "memo": "話(はなし)を合(あわせる) \n\n말을 맞추다",
+      "id": "a3777561-d735-45e4-a552-71f1a25497c8",
+      "level": 0,
+      "nextReview": "2026-11-16",
+      "lastReviewed": "",
+      "createdAt": "2026-11-16T11:45:58.721Z",
+      "updatedAt": "2026-11-16T11:45:58.721Z"
     }
   ]
 }
