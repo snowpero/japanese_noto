@@ -169,6 +169,22 @@
       "lastReviewed": "",
       "createdAt": "2026-11-16T11:54:15.695Z",
       "updatedAt": "2026-11-16T11:54:15.695Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "条件",
+      "reading": "じょうけん",
+      "meaning": "조건",
+      "memo": "条件(じょうけん)付(つき) \n\n조건부",
+      "id": "70233701-c4db-462c-9e6a-20a97b0a8653",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-16",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-16",
+      "createdAt": "2026-11-16T14:29:27.061Z",
+      "updatedAt": "2026-11-16T14:29:27.061Z"
     }
   ]
 }
