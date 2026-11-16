@@ -65,6 +65,19 @@
       "lastReviewed": "",
       "createdAt": "2026-11-16T11:20:23.444Z",
       "updatedAt": "2026-11-16T11:20:23.444Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "回収",
+      "reading": "かいしゅう",
+      "meaning": "회수",
+      "memo": "資本(しほん)の回収(かいしゅう)\n\n자본의 회수",
+      "id": "3aa0feda-2d13-4908-8292-181dddcaf431",
+      "level": 0,
+      "nextReview": "2026-11-16",
+      "lastReviewed": "",
+      "createdAt": "2026-11-16T11:24:31.764Z",
+      "updatedAt": "2026-11-16T11:24:31.764Z"
     }
   ]
 }
