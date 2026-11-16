@@ -26,6 +26,19 @@
       "lastReviewed": "",
       "createdAt": "2026-11-16T11:04:54.037Z",
       "updatedAt": "2026-11-16T11:04:54.037Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "両替",
+      "reading": "りょうがえ",
+      "meaning": "환전",
+      "memo": "両替(りょうがえ)商(しょう)\n\n환전상",
+      "id": "4884d89a-c999-4009-8c0e-3aa01d8420ef",
+      "level": 0,
+      "nextReview": "2026-11-16",
+      "lastReviewed": "",
+      "createdAt": "2026-11-16T11:07:28.392Z",
+      "updatedAt": "2026-11-16T11:07:28.392Z"
     }
   ]
 }
