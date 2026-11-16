@@ -142,7 +142,9 @@
       "nextReview": "2026-11-16",
       "lastReviewed": "",
       "createdAt": "2026-11-16T11:45:58.721Z",
-      "updatedAt": "2026-11-16T11:45:58.721Z"
+      "updatedAt": "2026-11-16T14:31:16.738Z",
+      "duplicateCount": 1,
+      "lastMistakeAt": "2026-11-16"
     },
     {
       "kind": "word",
