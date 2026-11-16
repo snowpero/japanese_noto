@@ -142,12 +142,13 @@
       "memo": "話(はなし)を合(あわせる) \n\n말을 맞추다",
       "id": "a3777561-d735-45e4-a552-71f1a25497c8",
       "level": 0,
-      "nextReview": "2026-11-16",
-      "lastReviewed": "",
+      "nextReview": "2026-11-18",
+      "lastReviewed": "2026-11-17",
       "createdAt": "2026-11-16T11:45:58.721Z",
-      "updatedAt": "2026-11-16T14:31:16.738Z",
+      "updatedAt": "2026-11-16T22:29:23.587Z",
       "duplicateCount": 1,
-      "lastMistakeAt": "2026-11-16"
+      "lastMistakeAt": "2026-11-16",
+      "reviewMissCount": 1
     },
     {
       "kind": "word",
