@@ -115,10 +115,11 @@
       "memo": "遠足(えんそく)に行(いく) \n\n소풍 가다",
       "id": "0e59e458-c096-4537-acaa-ed9618c22a87",
       "level": 0,
-      "nextReview": "2026-11-16",
-      "lastReviewed": "",
+      "nextReview": "2026-11-18",
+      "lastReviewed": "2026-11-17",
       "createdAt": "2026-11-16T11:33:41.885Z",
-      "updatedAt": "2026-11-16T11:33:41.885Z"
+      "updatedAt": "2026-11-16T22:28:41.527Z",
+      "reviewMissCount": 1
     },
     {
       "kind": "word",
