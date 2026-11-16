@@ -104,6 +104,19 @@
       "lastReviewed": "",
       "createdAt": "2026-11-16T11:29:51.346Z",
       "updatedAt": "2026-11-16T11:29:51.346Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "遠足",
+      "reading": "えんそく",
+      "meaning": "소풍",
+      "memo": "遠足(えんそく)に行(いく) \n\n소풍 가다",
+      "id": "0e59e458-c096-4537-acaa-ed9618c22a87",
+      "level": 0,
+      "nextReview": "2026-11-16",
+      "lastReviewed": "",
+      "createdAt": "2026-11-16T11:33:41.885Z",
+      "updatedAt": "2026-11-16T11:33:41.885Z"
     }
   ]
 }
