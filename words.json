@@ -78,6 +78,19 @@
       "lastReviewed": "",
       "createdAt": "2026-11-16T11:24:31.764Z",
       "updatedAt": "2026-11-16T11:24:31.764Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "似合う",
+      "reading": "にあう",
+      "meaning": "어울리다",
+      "memo": "帽子(ぼうし)がよく似合(にあう) \n\n모자가 잘 어울린다",
+      "id": "e6d2f476-cd52-4774-a777-7daae6cbc518",
+      "level": 0,
+      "nextReview": "2026-11-16",
+      "lastReviewed": "",
+      "createdAt": "2026-11-16T11:27:12.696Z",
+      "updatedAt": "2026-11-16T11:27:12.696Z"
     }
   ]
 }
