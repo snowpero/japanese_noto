@@ -52,6 +52,19 @@
       "lastReviewed": "",
       "createdAt": "2026-11-16T11:17:35.547Z",
       "updatedAt": "2026-11-16T11:17:35.547Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "起こる",
+      "reading": "おこる",
+      "meaning": "발생하다",
+      "memo": "事件(じけん)が起(おこる)\n\n사건이 일어나다",
+      "id": "9d690a7a-15b8-4996-8fbd-f2ac0114c84d",
+      "level": 0,
+      "nextReview": "2026-11-16",
+      "lastReviewed": "",
+      "createdAt": "2026-11-16T11:20:23.444Z",
+      "updatedAt": "2026-11-16T11:20:23.444Z"
     }
   ]
 }
