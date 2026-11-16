@@ -39,6 +39,19 @@
       "lastReviewed": "",
       "createdAt": "2026-11-16T11:07:28.392Z",
       "updatedAt": "2026-11-16T11:07:28.392Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "姿",
+      "reading": "すがた",
+      "meaning": "모양",
+      "memo": "晴(は)れ姿(すがた) \n\n차려입은 모습",
+      "id": "f8e39f5c-ae5d-402b-aa97-f3b4f04052d3",
+      "level": 0,
+      "nextReview": "2026-11-16",
+      "lastReviewed": "",
+      "createdAt": "2026-11-16T11:17:35.547Z",
+      "updatedAt": "2026-11-16T11:17:35.547Z"
     }
   ]
 }
