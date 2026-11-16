@@ -143,6 +143,19 @@
       "lastReviewed": "",
       "createdAt": "2026-11-16T11:45:58.721Z",
       "updatedAt": "2026-11-16T11:45:58.721Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "与える",
+      "reading": "あたえる",
+      "meaning": "주다, 수여하다",
+      "memo": "子供(こども)に小遣(こづかい)を与(あたえる) \n\n아이에게 용돈을 주다",
+      "id": "d9e03210-1737-4ff9-9bcc-20207641d801",
+      "level": 0,
+      "nextReview": "2026-11-16",
+      "lastReviewed": "",
+      "createdAt": "2026-11-16T11:52:18.303Z",
+      "updatedAt": "2026-11-16T11:52:18.303Z"
     }
   ]
 }
