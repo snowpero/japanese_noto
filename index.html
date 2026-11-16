@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f7f4">
-<title>일본어 오답노트</title>
+<title>일본어 오답노트 v1.3</title>
 <style>
 :root{font-family:system-ui,-apple-system,'Noto Sans KR',sans-serif;color:#202624;background:#f7f7f4}*{box-sizing:border-box}body{margin:0}main{max-width:820px;margin:auto;padding:20px 16px 70px}header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}h1{font-size:24px;margin:0}h2{font-size:18px;margin:0 0 14px}.muted,small{color:#727b77}.muted{font-size:13px}.panel{background:white;border:1px solid #e5e9e5;border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 2px 10px #172b1710}.tabs{display:flex;gap:7px;overflow:auto;padding-bottom:3px}.tabs button{white-space:nowrap}button,input,textarea,select{font:inherit}button{border:1px solid #d9e0db;border-radius:10px;background:white;color:#28332d;padding:10px 14px;cursor:pointer}button:hover{background:#f0f5f0}button.primary{background:#236a4d;border-color:#236a4d;color:white}button.primary:hover{background:#1b583f}button.danger{color:#b23b3b}button:disabled{opacity:.5;cursor:not-allowed}input,textarea,select{width:100%;border:1px solid #d9e0db;border-radius:9px;padding:11px;background:#fff;color:#202624}textarea{min-height:74px;resize:vertical}label{display:block;font-size:13px;font-weight:650;margin:12px 0 5px}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.row>*{min-width:0}.grow{flex:1}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{text-align:center;background:#edf5ef;border-radius:12px;padding:13px 7px}.stat strong{display:block;font-size:24px;color:#236a4d}.stat span{font-size:12px;color:#5e7064}.hidden{display:none!important}.card{text-align:center;background:#f3f7f3;border:1px solid #e0eae1;border-radius:14px;padding:28px 14px;margin:14px 0;min-height:195px;display:flex;flex-direction:column;justify-content:center;gap:10px;overflow-wrap:anywhere}.jp{font-size:32px;font-weight:700;line-height:1.5}.answer{font-size:19px}.pill{font-size:12px;border-radius:100px;background:#eaf1ec;padding:4px 9px;color:#446454}.item{padding:14px 0;border-bottom:1px solid #edf0ed}.item:last-child{border:0}.item-title{font-size:19px;font-weight:650;overflow-wrap:anywhere}.item .row{margin-top:7px}.notice{border-radius:10px;background:#fff8e8;padding:12px;color:#76581f;font-size:13px;line-height:1.6}.success{background:#e9f6ee;color:#236a4d}.right{margin-left:auto}.status{font-size:12px;max-width:320px;overflow-wrap:anywhere}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.subtle{font-size:13px;line-height:1.6}.topgap{margin-top:14px}@media(max-width:540px){h1{font-size:21px}.panel{padding:15px}.jp{font-size:27px}.grid2{grid-template-columns:1fr}.status{max-width:190px}}
 </style>
@@ -40,7 +40,7 @@ $('search').oninput=renderList;
 function edit(id){const x=data.items.find(x=>x.id===id);if(!x)return;editing=id;['kind','japanese','reading','meaning','memo'].forEach(k=>$(k).value=x[k]||'');$('formHeading').textContent='항목 수정';$('cancelEdit').classList.remove('hidden');show('add')}
 function clearForm(){editing=null;$('entryForm').reset();$('formHeading').textContent='새 항목 등록';$('cancelEdit').classList.add('hidden')}
 $('cancelEdit').onclick=clearForm;
-$('entryForm').onsubmit=e=>{e.preventDefault();const fields=Object.fromEntries(['kind','japanese','reading','meaning','memo'].map(k=>[k,$(k).value.trim()]));if(!fields.japanese||!fields.meaning)return;const now=new Date().toISOString();if(editing){const x=data.items.find(x=>x.id===editing);if(x)Object.assign(x,fields,{updatedAt:now})}else data.items.push({...fields,id:crypto.randomUUID(),level:0,nextReview:today(),lastReviewed:'',createdAt:now,updatedAt:now});clearForm();persist();show('list');status('브라우저에 저장했어. GitHub 연결 시 자동 동기화를 시도해.')};
+$('entryForm').onsubmit=e=>{e.preventDefault();const fields=Object.fromEntries(['kind','japanese','reading','meaning','memo'].map(k=>[k,$(k).value.trim()]));if(!fields.japanese||!fields.meaning)return;const now=new Date().toISOString();if(editing){const x=data.items.find(x=>x.id===editing);if(x)Object.assign(x,fields,{updatedAt:now})}else data.items.push({...fields,id:crypto.randomUUID(),level:0,nextReview:today(),lastReviewed:'',createdAt:now,updatedAt:now});clearForm();persist();show('list');status(connected()?'브라우저에 저장했어. GitHub 저장을 시도할게.':'브라우저에 저장했어. GitHub 연결 후 동기화할 수 있어.')};
 function remove(id){if(!confirm('이 항목을 삭제할까?'))return;data.items=data.items.filter(x=>x.id!==id);persist()}
 const endpoint=c=>`https://api.github.com/repos/${encodeURIComponent(c.owner)}/${encodeURIComponent(c.repo)}/contents/${c.path.split('/').map(encodeURIComponent).join('/')}`;
 async function request(c,method,body){const url=endpoint(c)+(method==='GET'?`?ref=${encodeURIComponent(c.branch)}&t=${Date.now()}`:'');const res=await fetch(url,{method,headers:{'Accept':'application/vnd.github+json','Authorization':`Bearer ${c.token}`,'X-GitHub-Api-Version':'2022-11-28',...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});if(!res.ok){let detail='';try{detail=(await res.json()).message||''}catch{}throw new Error(`${res.status} ${detail}`)}return res.json()}
@@ -50,7 +50,40 @@ async function remote(c){const f=await request(c,'GET');const d=JSON.parse(decod
 let lastSynced=null;
 function snapshot(d){return JSON.stringify(d)}
 async function pull(){if(!connected())return status('GitHub 사용자명, 저장소, 토큰을 먼저 입력해.');if(busy)return;busy=true;try{const r=await remote(config());if(data.items.length&&lastSynced!==snapshot(data)&&!confirm('현재 브라우저의 변경 내용을 GitHub 데이터로 덮어쓸까?'))return;data=r.data;lastSynced=snapshot(data);localStorage.setItem(KEY,lastSynced);render();status('GitHub에서 최신 데이터를 불러왔어.')}catch(e){status('불러오기 실패: '+e.message)}finally{busy=false}}
-async function push(){if(!connected())return status('GitHub 설정을 먼저 연결해.');if(busy)return;busy=true;const c=config(),startRev=rev;try{const r=await remote(c);if(lastSynced===null){if(data.items.length&&snapshot(data)!==snapshot(r.data))throw Error('동기화 기준이 없어. 먼저 GitHub에서 불러오거나 백업 후 다시 시도해.');lastSynced=snapshot(r.data)}if(snapshot(r.data)!==lastSynced)throw Error('다른 기기에서 변경했어. JSON 백업 후 GitHub에서 다시 불러와 충돌을 해결해.');const sending=snapshot(data);if(sending===snapshot(r.data)){status('이미 최신 상태야.');return}await request(c,'PUT',{message:'Update Japanese study notes',content:encode64(JSON.stringify(data,null,2)+'\n'),sha:r.sha,branch:c.branch});lastSynced=sending;status('GitHub 저장 완료 ✓');if(rev!==startRev)scheduleSave()}catch(e){status('GitHub 저장 실패: '+e.message)}finally{busy=false}}
+function mergeFirstSave(local,server){
+  const byId=new Map(server.items.map(x=>[x.id,x]));
+  for(const item of local.items){
+    const existing=byId.get(item.id);
+    if(existing&&JSON.stringify(existing)!==JSON.stringify(item))throw Error('동일한 항목이 양쪽에서 다르게 수정됐어. JSON 백업 후 확인해.');
+    byId.set(item.id,item);
+  }
+  return {...server,items:[...byId.values()]};
+}
+async function push(){
+  if(!connected())return status('GitHub 설정을 먼저 연결해.');
+  if(busy){scheduleSave();return}
+  busy=true;
+  const c=config(),startRev=rev;
+  try{
+    const r=await remote(c);
+    let sendingData=data;
+    if(lastSynced===null){
+      // 최초 저장: 원격의 기존 항목을 삭제하지 않고, 로컬 신규 항목만 병합.
+      sendingData=mergeFirstSave(data,r.data);
+    }else if(snapshot(r.data)!==lastSynced){
+      throw Error('다른 기기에서 변경했어. JSON 백업 후 GitHub에서 다시 불러와 충돌을 해결해.');
+    }
+    const sending=snapshot(sendingData);
+    if(sending!==snapshot(r.data)){
+      await request(c,'PUT',{message:'Update Japanese study notes',content:encode64(JSON.stringify(sendingData,null,2)+'\n'),sha:r.sha,branch:c.branch});
+    }
+    lastSynced=sending;
+    // 저장 도중 새 편집이 생겼다면 새 편집을 잃지 않고 재저장.
+    if(rev===startRev){data=sendingData;localStorage.setItem(KEY,sending);render()}
+    status(sending===snapshot(r.data)?'이미 최신 상태야.':'GitHub 저장 완료 ✓');
+  }catch(e){status('GitHub 저장 실패: '+e.message)}
+  finally{busy=false;if(rev!==startRev)scheduleSave()}
+}
 function scheduleSave(){clearTimeout(saveTimer);if(connected())saveTimer=setTimeout(()=>{if(!busy)push();else scheduleSave()},1200)}
 $('connect').onclick=async()=>{remember();badge();await pull()};$('pull').onclick=pull;$('push').onclick=push;
 $('forgetToken').onclick=()=>{localStorage.removeItem(TOKEN);sessionStorage.removeItem(TOKEN);$('token').value='';$('rememberToken').checked=false;badge();status('저장된 토큰을 삭제했어. 저장소 설정과 오답 데이터는 유지돼.')};
