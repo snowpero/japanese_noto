@@ -432,6 +432,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T14:46:06.730Z",
       "updatedAt": "2026-11-17T14:46:06.730Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "～ようになる",
+      "reading": "",
+      "meaning": "~하게 되다",
+      "memo": "",
+      "id": "a163a00f-037a-4610-a5ff-6b08c413ea1b",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T14:46:29.897Z",
+      "updatedAt": "2026-11-17T14:46:29.897Z"
     }
   ]
 }
