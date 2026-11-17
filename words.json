@@ -400,6 +400,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T14:45:28.363Z",
       "updatedAt": "2026-11-17T14:45:28.363Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "～てはいけない",
+      "reading": "",
+      "meaning": "~하면 안 된다",
+      "memo": "",
+      "id": "0064f094-8b24-46f1-8c0f-5545c61dc9e9",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T14:45:48.180Z",
+      "updatedAt": "2026-11-17T14:45:48.180Z"
     }
   ]
 }
