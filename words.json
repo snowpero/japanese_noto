@@ -192,6 +192,22 @@
       "lastMistakeAt": "2026-11-16",
       "createdAt": "2026-11-16T14:29:27.061Z",
       "updatedAt": "2026-11-16T22:30:23.820Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "仮に",
+      "reading": "かりに",
+      "meaning": "만일",
+      "memo": "仮(かり)に僕(ぼく)が君(きみ)だったら \n\n만일 내가 너라면",
+      "id": "e1a32706-50ff-4ffc-9393-bc89fae61530",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T13:42:45.589Z",
+      "updatedAt": "2026-11-17T13:42:45.589Z"
     }
   ]
 }
