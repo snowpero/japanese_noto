@@ -384,6 +384,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T14:45:06.332Z",
       "updatedAt": "2026-11-17T14:45:06.332Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "～なくてもいい",
+      "reading": "",
+      "meaning": "~하지 않아도 된다",
+      "memo": "",
+      "id": "06ec7179-b80a-4237-9011-f980cc02e974",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T14:45:28.363Z",
+      "updatedAt": "2026-11-17T14:45:28.363Z"
     }
   ]
 }
