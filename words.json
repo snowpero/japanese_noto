@@ -336,6 +336,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T14:13:19.869Z",
       "updatedAt": "2026-11-17T14:13:19.869Z"
+    },
+    {
+      "kind": "grammar",
+      "japanese": "명사 + ばかり",
+      "reading": "",
+      "meaning": "~만, 주로 ~만",
+      "memo": "",
+      "id": "fcb48dcb-aec6-4c3c-a2eb-e47ec7713945",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T14:20:07.749Z",
+      "updatedAt": "2026-11-17T14:20:07.749Z"
     }
   ]
 }
