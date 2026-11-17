@@ -288,6 +288,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T13:51:31.522Z",
       "updatedAt": "2026-11-17T13:51:31.522Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "法律",
+      "reading": "ほうりつ",
+      "meaning": "법률",
+      "memo": "法律(ほうりつ)学(がく) \n\n법률학",
+      "id": "2014c3f7-ee90-4f43-a066-91a325d8b2ab",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T13:52:40.073Z",
+      "updatedAt": "2026-11-17T13:52:40.073Z"
     }
   ]
 }
