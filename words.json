@@ -57,11 +57,15 @@
       "meaning": "모양",
       "memo": "晴(は)れ姿(すがた) \n\n차려입은 모습",
       "id": "f8e39f5c-ae5d-402b-aa97-f3b4f04052d3",
-      "level": 1,
-      "nextReview": "2026-11-18",
-      "lastReviewed": "2026-11-17",
+      "level": 2,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "2026-11-18",
       "createdAt": "2026-11-16T11:17:35.547Z",
-      "updatedAt": "2026-11-16T22:27:02.650Z"
+      "updatedAt": "2026-11-17T23:22:47.876Z",
+      "reviewIntervalMinutes": 10,
+      "reviewInterval": 0.006944444444444444,
+      "lastRating": "good",
+      "nextReviewAt": "2026-11-17T23:32:47.876Z"
     },
     {
       "kind": "word",
