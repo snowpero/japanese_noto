@@ -74,11 +74,17 @@
       "meaning": "발생하다",
       "memo": "事件(じけん)が起(おこる)\n\n사건이 일어나다",
       "id": "9d690a7a-15b8-4996-8fbd-f2ac0114c84d",
-      "level": 1,
-      "nextReview": "2026-11-18",
-      "lastReviewed": "2026-11-17",
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "2026-11-18",
       "createdAt": "2026-11-16T11:20:23.444Z",
-      "updatedAt": "2026-11-16T22:27:25.113Z"
+      "updatedAt": "2026-11-17T23:23:03.288Z",
+      "reviewIntervalMinutes": 1,
+      "reviewInterval": 0.0006944444444444445,
+      "lastRating": "again",
+      "nextReviewAt": "2026-11-17T23:24:03.288Z",
+      "reviewMissCount": 1,
+      "lastMistakeAt": "2026-11-18"
     },
     {
       "kind": "word",
