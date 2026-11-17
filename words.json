@@ -224,6 +224,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T13:44:16.489Z",
       "updatedAt": "2026-11-17T13:44:16.489Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "漸く",
+      "reading": "ようやく",
+      "meaning": "겨우",
+      "memo": "漸(ようや)く合格(ごうかく)した \n\n간신히 합격했다",
+      "id": "50a852ca-5f0d-4430-91ae-e8c17136c30a",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T13:46:09.606Z",
+      "updatedAt": "2026-11-17T13:46:09.606Z"
     }
   ]
 }
