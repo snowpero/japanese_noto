@@ -208,6 +208,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T13:42:45.589Z",
       "updatedAt": "2026-11-17T13:42:45.589Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "やっと",
+      "reading": "",
+      "meaning": "겨우",
+      "memo": "やっと勝(か)った試合(しあい) \n\n겨우 이긴 시합",
+      "id": "8dfc7e21-1c7f-4281-8ff1-f22601d314b5",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T13:44:16.489Z",
+      "updatedAt": "2026-11-17T13:44:16.489Z"
     }
   ]
 }
