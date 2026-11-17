@@ -240,6 +240,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T13:46:09.606Z",
       "updatedAt": "2026-11-17T13:46:09.606Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "一応",
+      "reading": "いちおう",
+      "meaning": "우선, 일단",
+      "memo": "一応(いちおう)そう結論(けつろん)できる \n\n일단 그렇게 결론지을 수 있다",
+      "id": "0c4cd5a1-e4d8-42cd-bd50-3fdd81c2bbfe",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T13:48:16.090Z",
+      "updatedAt": "2026-11-17T13:48:16.090Z"
     }
   ]
 }
