@@ -352,6 +352,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T14:20:07.749Z",
       "updatedAt": "2026-11-17T14:20:07.749Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "きちんと",
+      "reading": "",
+      "meaning": "깔끔하게",
+      "memo": "",
+      "id": "d5cb65c7-4402-48f3-a469-33fae4e77f7b",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T14:20:41.922Z",
+      "updatedAt": "2026-11-17T14:20:41.922Z"
     }
   ]
 }
