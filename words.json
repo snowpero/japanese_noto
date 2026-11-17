@@ -22,12 +22,16 @@
       "meaning": "인정하다",
       "memo": "異常(いじょう)を認(みと)める \n\n이상을 인지하다",
       "id": "802d3503-bf21-45fb-bea5-9c3d4c658133",
-      "level": 0,
-      "nextReview": "2026-11-18",
-      "lastReviewed": "2026-11-17",
+      "level": 1,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "2026-11-18",
       "createdAt": "2026-11-16T11:04:54.037Z",
-      "updatedAt": "2026-11-16T22:26:46.156Z",
-      "reviewMissCount": 1
+      "updatedAt": "2026-11-17T23:22:42.160Z",
+      "reviewMissCount": 1,
+      "reviewIntervalMinutes": 6,
+      "reviewInterval": 0.004166666666666667,
+      "lastRating": "hard",
+      "nextReviewAt": "2026-11-17T23:28:42.160Z"
     },
     {
       "kind": "word",
