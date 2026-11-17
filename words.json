@@ -272,6 +272,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T13:50:14.373Z",
       "updatedAt": "2026-11-17T13:50:14.373Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "一部",
+      "reading": "いちぶ",
+      "meaning": "일부",
+      "memo": "",
+      "id": "7883b30a-28f2-4cdb-bb2a-697206b60c3c",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T13:51:31.522Z",
+      "updatedAt": "2026-11-17T13:51:31.522Z"
     }
   ]
 }
