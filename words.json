@@ -464,6 +464,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T14:55:07.959Z",
       "updatedAt": "2026-11-17T14:55:07.959Z"
+    },
+    {
+      "kind": "grammar",
+      "japanese": "なら",
+      "reading": "",
+      "meaning": "~라면",
+      "memo": "",
+      "id": "a1e19302-aedb-4c02-a601-07cfd90fbe91",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T14:56:44.008Z",
+      "updatedAt": "2026-11-17T14:56:44.008Z"
     }
   ]
 }
