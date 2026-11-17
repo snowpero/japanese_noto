@@ -93,11 +93,15 @@
       "meaning": "회수",
       "memo": "資本(しほん)の回収(かいしゅう)\n\n자본의 회수",
       "id": "3aa0feda-2d13-4908-8292-181dddcaf431",
-      "level": 1,
-      "nextReview": "2026-11-18",
-      "lastReviewed": "2026-11-17",
+      "level": 2,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "2026-11-18",
       "createdAt": "2026-11-16T11:24:31.764Z",
-      "updatedAt": "2026-11-16T22:27:35.175Z"
+      "updatedAt": "2026-11-17T23:23:11.330Z",
+      "reviewIntervalMinutes": 10,
+      "reviewInterval": 0.006944444444444444,
+      "lastRating": "good",
+      "nextReviewAt": "2026-11-17T23:33:11.330Z"
     },
     {
       "kind": "word",
