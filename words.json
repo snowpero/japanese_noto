@@ -320,6 +320,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T14:12:29.335Z",
       "updatedAt": "2026-11-17T14:12:40.336Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "あまりにも",
+      "reading": "",
+      "meaning": "지나치게",
+      "memo": "",
+      "id": "dda4815e-969c-4f85-91f0-9ce0742480d3",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-17",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-17",
+      "createdAt": "2026-11-17T14:13:19.869Z",
+      "updatedAt": "2026-11-17T14:13:19.869Z"
     }
   ]
 }
