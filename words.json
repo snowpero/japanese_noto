@@ -554,6 +554,22 @@
       "lastMistakeAt": "2026-11-18",
       "createdAt": "2026-11-18T08:08:14.995Z",
       "updatedAt": "2026-11-18T08:08:14.995Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "試験",
+      "reading": "しけん",
+      "meaning": "시험",
+      "memo": "",
+      "id": "8bd9d583-5182-4c46-9195-6e7cac3b9363",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-18",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-18",
+      "createdAt": "2026-11-18T08:09:09.578Z",
+      "updatedAt": "2026-11-18T08:09:09.578Z"
     }
   ]
 }
