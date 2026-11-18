@@ -538,6 +538,22 @@
       "lastMistakeAt": "2026-11-18",
       "createdAt": "2026-11-18T08:04:55.979Z",
       "updatedAt": "2026-11-18T08:04:55.979Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "横",
+      "reading": "よこ",
+      "meaning": "옆, 가로",
+      "memo": "",
+      "id": "a6c66374-0eb2-4df6-ba6a-2d119eee28a2",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-18",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-18",
+      "createdAt": "2026-11-18T08:08:14.995Z",
+      "updatedAt": "2026-11-18T08:08:14.995Z"
     }
   ]
 }
