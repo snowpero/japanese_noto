@@ -522,6 +522,22 @@
       "lastMistakeAt": "2026-11-18",
       "createdAt": "2026-11-18T07:41:04.031Z",
       "updatedAt": "2026-11-18T07:41:04.031Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "寂しい",
+      "reading": "さびしい",
+      "meaning": "쓸쓸하다, 외롭다",
+      "memo": "",
+      "id": "79859010-8264-457a-9cb5-242063585174",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-18",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-18",
+      "createdAt": "2026-11-18T08:04:55.979Z",
+      "updatedAt": "2026-11-18T08:04:55.979Z"
     }
   ]
 }
