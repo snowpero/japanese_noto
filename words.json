@@ -506,6 +506,22 @@
       "lastMistakeAt": "2026-11-17",
       "createdAt": "2026-11-17T14:56:44.008Z",
       "updatedAt": "2026-11-17T14:56:44.008Z"
+    },
+    {
+      "kind": "word",
+      "japanese": "安い",
+      "reading": "やすい",
+      "meaning": "1. 싸다 2. 편하다",
+      "memo": "",
+      "id": "705c43ba-fa15-48c6-8b24-bdb107b1fa6d",
+      "duplicateCount": 0,
+      "reviewMissCount": 0,
+      "level": 0,
+      "nextReview": "2026-11-18",
+      "lastReviewed": "",
+      "lastMistakeAt": "2026-11-18",
+      "createdAt": "2026-11-18T07:41:04.031Z",
+      "updatedAt": "2026-11-18T07:41:04.031Z"
     }
   ]
 }
